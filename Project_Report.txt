@@ -1,0 +1,64 @@
+
+SOLAR PANEL HOTSPOT DETECTION USING YOLO
+
+1. INTRODUCTION
+Solar panels can develop hotspots due to faults, shading,
+damaged cells and other operating conditions. This project
+uses a YOLO object detection model to identify candidate
+hotspot regions in solar panel thermal images.
+
+2. OBJECTIVE
+To develop a prototype object detection system that processes
+solar panel images and highlights candidate hotspot regions.
+
+3. TECHNOLOGIES USED
+- Python
+- Google Colab
+- YOLOv8
+- Ultralytics
+- PyTorch
+- OpenCV
+- Matplotlib
+
+4. DATASET
+- Total images: 5000
+- Training images: 4000
+- Validation images: 500
+- Testing images: 500
+
+5. METHODOLOGY
+1. Dataset extraction and inspection.
+2. Automatic candidate-region annotation using HSV colour
+   thresholding.
+3. Preparation of YOLO-format labels and data.yaml.
+4. YOLOv8n model training.
+5. Model prediction on test images.
+6. Saving prediction images.
+
+6. TRAINING
+Training was interrupted after 17 epochs because of the
+Google Colab GPU usage limit. The saved best model checkpoint
+was used to generate predictions on all 500 test images.
+
+7. TRAINING METRICS
+metrics/precision(B): 0.5969
+metrics/recall(B): 0.5012
+metrics/mAP50(B): 0.5758
+metrics/mAP50-95(B): 0.3708
+
+8. RESULTS
+The saved YOLO model processed all 500 test images.
+Prediction images are available in the Final_Results folder.
+
+9. LIMITATIONS
+The labels were automatically generated using thermal colour
+thresholding. They are provisional candidate annotations,
+not independently verified ground-truth labels. Therefore,
+the reported metrics and predictions are preliminary and
+should not be treated as validated real-world accuracy.
+
+10. CONCLUSION
+A YOLOv8-based solar panel hotspot detection prototype was
+implemented. The model was trained, saved and used to generate
+predictions for the test images. Further work should include
+expert-verified annotations and independent model evaluation.
