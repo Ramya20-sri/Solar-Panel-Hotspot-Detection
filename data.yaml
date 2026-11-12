@@ -1,0 +1,6 @@
+path: /content/drive/MyDrive/Solar_Panel_Project./hotspot_dataset/hotspot_dataset_yolo
+train: train/images
+val: valid/images
+test: test/images
+names:
+  0: hotspot
